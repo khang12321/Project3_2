@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="339dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/txtTitle"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="396dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/txtImage"
+        app:layout_constraintBottom_toTopOf="@+id/txtnumberOfAthletes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:srcCompat="@drawable/triathalon" />
+
+    <Spinner
+        android:id="@+id/location"
+        android:layout_width="264dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/location"
+        app:layout_constraintBottom_toTopOf="@+id/btnCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnumberOfAthletes" />
+
+    <Button
+        android:id="@+id/btnCost"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btnCost"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="351dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCost" />
+
+    <EditText
+        android:id="@+id/txtnumberOfAthletes"
+        android:layout_width="254dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txtNumberOfAthletes"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
